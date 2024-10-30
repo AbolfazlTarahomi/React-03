@@ -1,9 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 const pizzaData = [
   {
@@ -48,24 +46,23 @@ const pizzaData = [
   },
 ];
 
-
-
 function App() {
-  return <div>
-  <h3>hello</h3>
-  <Pizza /> 
-  </div>
-  
+  return (
+    <div>
+      <h3>hello</h3>
+      <Pizza />
+      <Pizza />
+    </div>
+  );
 }
 
-
-function Pizza(){
-  return <h2>Pizza</h2>
+function Pizza() {
+  return (
+    <div>
+      <h2>BBQ Chicken Pizza</h2>
+      <img src="src\assets\pizaa-1.jpg" alt="image food" />
+    </div>
+  );
 }
 
-
-
-
-
-
-export default App
+export default App;
