@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -49,11 +49,35 @@ const pizzaData = [
 function App() {
   return (
     <div>
-      <h3>hello</h3>
+      <Header />
+      <Menu />
+      <Footer />
+    </div>
+  );
+}
+
+function Header() {
+  return <h1>Fast Pizza co.</h1>;
+}
+
+function Menu() {
+  return (
+    <div>
+      <h2> our menu</h2>
+      <Pizza />
       <Pizza />
       <Pizza />
     </div>
   );
+}
+
+function Footer() {
+  return (
+    <footer>
+      {new Date().toLocaleDateString()} .we Are best pizza food in world
+    </footer>
+  );
+  // return  React.createElement('FOOTER', null, "we Are best pizza food in world" );
 }
 
 function Pizza() {
