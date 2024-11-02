@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-
+ 
 const pizzaData = [
   {
     Name: "Pizza 1",
@@ -56,9 +56,11 @@ function App() {
   );
 }
 
+
 function Header() {
   return <h1>Fast Pizza co.</h1>;
 }
+
 
 function Menu() {
   return (
@@ -72,6 +74,11 @@ function Menu() {
 }
 
 function Footer() {
+  const houre = new Date().getHours
+  const openHoure = 8;
+  const close = 22;
+  const isopen = houre >= openHoure && houre <= close ;
+
   return (
     <footer>
       {new Date().toLocaleDateString()} .we Are best pizza food in world
