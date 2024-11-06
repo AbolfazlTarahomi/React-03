@@ -64,13 +64,18 @@ function Header() {
 function Menu() {
   return (
     <div>
-      <h2> our menu</h2>
+      <h2>Our Menu</h2>
       <Pizza
-        Name="pizzzxaxa"
-        ingredient="best pizza"
-        photoName="src\assets\pizaa-1.jpg"
+        name="Vegetarian Pizza"
+        photoName="src/assets/pizaa-1.jpg"
         price="10"
       />
+
+      <Pizza
+        name="Four Cheese Pizza"
+        photoName="src/assets/pizaa-1.jpg"
+        price="11"
+      ></Pizza>
     </div>
   );
 }
@@ -80,11 +85,14 @@ function Pizza(props) {
 
   return (
     <div>
-      <h2>BBQ Chicken Pizza</h2>
-      <img src="src\assets\pizaa-1.jpg" alt="image food" />
+      <h2>{props.Name}</h2>
+      <img src={props.photoName} alt={props.Name} />
+      <p>Price: {props.price}</p> {/* اضافه کردن قیمت */}
     </div>
   );
 }
+
+
 
 function Footer() {
   const houre = new Date().getHours;
@@ -97,7 +105,7 @@ function Footer() {
       {new Date().toLocaleDateString()} .we Are best pizza food in world
     </footer>
   );
-  // return  React.createElement('FOOTER', null, "we Are best pizza food in world" );
+ 
 }
 
 export default App;
