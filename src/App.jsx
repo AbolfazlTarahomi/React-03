@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
- 
+import { createLogger } from "vite";
+
 const pizzaData = [
   {
     Name: "Pizza 1",
@@ -56,28 +57,40 @@ function App() {
   );
 }
 
-
 function Header() {
-  return <h1>Fast Pizza co.</h1>;
+  return <h1 style={{ color: "red", fontSize: "20px" }}>Fast Pizza co.</h1>;
 }
-
 
 function Menu() {
   return (
     <div>
       <h2> our menu</h2>
-      <Pizza />
-      <Pizza />
-      <Pizza />
+      <Pizza
+        Name="pizzzxaxa"
+        ingredient="best pizza"
+        photoName="src\assets\pizaa-1.jpg"
+        price="10"
+      />
+    </div>
+  );
+}
+
+function Pizza(props) {
+  console.log(props);
+
+  return (
+    <div>
+      <h2>BBQ Chicken Pizza</h2>
+      <img src="src\assets\pizaa-1.jpg" alt="image food" />
     </div>
   );
 }
 
 function Footer() {
-  const houre = new Date().getHours
+  const houre = new Date().getHours;
   const openHoure = 8;
   const close = 22;
-  const isopen = houre >= openHoure && houre <= close ;
+  const isopen = houre >= openHoure && houre <= close;
 
   return (
     <footer>
@@ -87,13 +100,6 @@ function Footer() {
   // return  React.createElement('FOOTER', null, "we Are best pizza food in world" );
 }
 
-function Pizza() {
-  return (
-    <div>
-      <h2>BBQ Chicken Pizza</h2>
-      <img src="src\assets\pizaa-1.jpg" alt="image food" />
-    </div>
-  );
-}
-
 export default App;
+
+// 42
