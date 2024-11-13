@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
 
-
 const pizzaData = [
   {
     Name: "Pizza 1",
@@ -76,11 +75,6 @@ function Menu() {
         photoName="src\assets\pizaa-2.jpg"
         price="15$"
       />
-
-      
-     
-
-
     </div>
   );
 }
@@ -89,15 +83,13 @@ function Pizza(props) {
   console.log(props);
 
   return (
-    <div className="bg-purple-700 flex justify-center items-center" >
+    <div className="bg-purple-700 rounded-xl flex justify-center items-center">
       <h2>{props.Name}</h2>
-      <img src={props.photoName} alt={props.Name} className="w-72 h-60" />
+      <img src={props.photoName} alt={props.Name} className="w-72 h-60 rounded-full" />
       <p>Price: {props.price}</p> {/* اضافه کردن قیمت */}
     </div>
   );
 }
-
-
 
 function Footer() {
   const houre = new Date().getHours;
@@ -110,8 +102,6 @@ function Footer() {
       {new Date().toLocaleDateString()} .we Are best pizza food in world
     </footer>
   );
- 
 }
 
 export default App;
-
