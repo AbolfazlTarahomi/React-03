@@ -66,14 +66,15 @@ function Menu() {
       <Pizza
         name="Vegetarian Pizza"
         photoName="src/assets/pizaa-1.jpg"
-        price="10"
+        price="10$"
       />
 
       <hr />
 
       <Pizza
         name="Italian Pizza"
-        photoName=""
+        photoName="src\assets\pizaa-2.jpg"
+        price="15$"
       />
      
 
@@ -88,7 +89,7 @@ function Pizza(props) {
   return (
     <div>
       <h2>{props.Name}</h2>
-      <img src={props.photoName} alt={props.Name} />
+      <img src={props.photoName} alt={props.Name}/>
       <p>Price: {props.price}</p> {/* اضافه کردن قیمت */}
     </div>
   );
