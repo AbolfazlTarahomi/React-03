@@ -69,11 +69,15 @@ function Menu() {
         price="10"
       />
 
+      <hr />
+
       <Pizza
-        name="Four Cheese Pizza"
-        photoName="src/assets/pizaa-1.jpg"
-        price="11"
-      ></Pizza>
+        name="Italian Pizza"
+        photoName=""
+      />
+     
+
+
     </div>
   );
 }
