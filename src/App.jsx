@@ -76,6 +76,8 @@ function Menu() {
         photoName="src\assets\pizaa-2.jpg"
         price="15$"
       />
+
+      
      
 
 
@@ -87,9 +89,9 @@ function Pizza(props) {
   console.log(props);
 
   return (
-    <div>
+    <div className="bg-purple-700 flex justify-center items-center" >
       <h2>{props.Name}</h2>
-      <img src={props.photoName} alt={props.Name}/>
+      <img src={props.photoName} alt={props.Name} className="w-72 h-60" />
       <p>Price: {props.price}</p> {/* اضافه کردن قیمت */}
     </div>
   );
