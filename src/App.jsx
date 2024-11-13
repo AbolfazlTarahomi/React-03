@@ -110,4 +110,3 @@ function Footer() {
 
 export default App;
 
-// 42
